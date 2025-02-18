@@ -12,7 +12,7 @@ InserisciNome:
     Console.WriteLine();
     Console.WriteLine("Inserisci Nome");
     string responseNome = Console.ReadLine();
-    if (!string.IsNullOrWhiteSpace(responseNome))
+    if (!string.IsNullOrWhiteSpace(responseNome) && responseNome.All(x => char.IsLetter(x)))
     {
         cv.informazioniPersonali.Nome = responseNome;
     }
@@ -25,7 +25,7 @@ InserisciCognome:
     Console.WriteLine();
     Console.WriteLine("Insersci Cognome");
     string responseCognome = Console.ReadLine();
-    if (!string.IsNullOrWhiteSpace(responseCognome))
+    if (!string.IsNullOrWhiteSpace(responseCognome) && responseCognome.All(x => char.IsLetter(x)))
     {
         cv.informazioniPersonali.Cognome = responseCognome;
     }
